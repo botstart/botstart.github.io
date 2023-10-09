@@ -131,7 +131,7 @@ body {
 .glowing-button-wrap {
   text-align: center;
   transform: translate(-50%, -50%);
-  max-width: 800px;
+  max-width: 30px;
 }
 
 .glowing-button {
