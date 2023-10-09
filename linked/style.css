@@ -151,7 +151,7 @@ body {
   white-space: nowrap;
   margin: 10px;
   position: relative;
-  background-color: #f01f1f;
+  background-color: transparant;
   box-shadow: 0 0 20px 0 #f01f1f;
   border: 2px solid #f01f1f;
   padding: 20px 80px;
