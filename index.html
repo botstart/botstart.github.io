@@ -352,5 +352,25 @@
       </div>
       <br>
        <div id="penutup"></div>  
+
+<script>
+// Fungsi untuk menyesuaikan ukuran font dengan lebar tombol
+function adjustFontSize() {
+  var buttons = document.querySelectorAll(".button");
+  buttons.forEach(function(button) {
+    var buttonWidth = button.offsetWidth;
+    var textWidth = button.scrollWidth;
+    var fontSize = parseFloat(getComputedStyle(button).fontSize);
+    if (textWidth > buttonWidth) {
+      fontSize *= buttonWidth / textWidth;
+      button.style.fontSize = fontSize + "px";
+    }
+  });
+}
+
+// Panggil fungsi saat dokumen dimuat dan saat ukuran jendela berubah
+document.addEventListener("DOMContentLoaded", adjustFontSize);
+window.addEventListener("resize", adjustFontSize);
+</script>
   </body>
 </html>
