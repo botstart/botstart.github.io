@@ -139,7 +139,6 @@ body {
   50% { opacity: 1; }
   100% { opacity: 0; }
 }
-
 .glowing-button-wrap {
   text-align: center;
   position: absolute;
@@ -156,7 +155,6 @@ body {
   background-color: transparent;
   box-shadow: 0 0 20px 0 #f01f1f;
   border: 2px solid #f01f1f;
-  padding: 20px 80px;
   background-color: transparent;
   transition: 0.4s;
   font-size: 20px;
@@ -164,6 +162,8 @@ body {
   color: #000;
   z-index: 0;
   width: auto; /* Biarkan ukuran tombol menyesuaikan teks */
+  max-width: 100%; /* Tetapkan lebar maksimum agar tidak melebihi parent */
+  padding: 10px 40px; /* Padding yang lebih kecil untuk menjaga ukuran tombol tetap */
 }
 
   .logo {
