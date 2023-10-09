@@ -117,21 +117,19 @@ body {
   text-align: center;
 }
 
+.button {
+   padding: 10px 20px;
+   border-radius: 30px;
+   border: #000 solid 5px;
+   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+   border-bottom: 3px solid #ccc;
+   background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0);
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   max-width: 200px; /* Sesuaikan dengan lebar maksimum yang Anda inginkan */
+}
 
-  .button {
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    border: #000 solid 5px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-    border-bottom: 3px solid #ccc;
-    background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    transition: font-size 0.3s; /* Menambahkan efek transisi */
-  }
 
   .logo {
     font-family: 'arial', sans-serif;
