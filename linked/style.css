@@ -117,6 +117,7 @@ body {
   text-align: center;
 }
 
+
 .button {
   font-size: 2em;
   padding: 10px 20px;
@@ -127,16 +128,13 @@ body {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   border-bottom: 3px solid #ccc;
   background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0);
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 100%;
+  white-space: nowrap; /* Ini untuk mencegah teks melampaui tombol */
+  overflow: hidden; /* Ini untuk memotong teks yang melampaui tombol */
+  text-overflow: ellipsis; /* Ini untuk menampilkan elipsis (...) jika teks terpotong */
+  max-width: 100%; /* Ini untuk membatasi lebar tombol */
   display: inline-block;
 }
 
-.button:hover {
-  font-size: 2em;
-}
 
 
   .logo {
