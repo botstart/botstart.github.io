@@ -114,7 +114,7 @@ body {
 
 
 .button {
-   font-size: 2em; /* Tetapkan ukuran font tombol */
+   font-size: 2em;
    padding: 10px 20px;
    border-radius: 30px;
    text-decoration: none;
@@ -126,22 +126,11 @@ body {
    overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
-   display: inline-flex; /* Menambahkan ini */
-   align-items: center; /* Menambahkan ini */
-   justify-content: center; /* Menambahkan ini */
    max-width: 100%; /* Menambahkan ini */
-}
-
-.button span {
-   max-width: 100%; /* Menambahkan ini */
-   white-space: nowrap;
-   text-overflow: ellipsis;
-   overflow: hidden;
-   display: inline-block;
 }
 
 .button:hover {
-   font-size: 2em; /* Ukuran font saat tombol dihover, jika Anda ingin tetap sama */
+   font-size: 2em;
 }
 
 
