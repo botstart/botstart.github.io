@@ -118,7 +118,6 @@ body {
 }
 
 
-
   .button {
     padding: 10px 20px;
     border-radius: 30px;
@@ -132,6 +131,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     display: inline-block;
+    transition: font-size 0.3s; /* Menambahkan efek transisi */
   }
 
   .logo {
