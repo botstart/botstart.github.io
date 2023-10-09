@@ -113,6 +113,24 @@ body {
   }
 
 
+.button { 
+   display: inline-block; 
+   font-size: 2em; 
+   padding: 0.5em 1em; /* Sesuaikan padding sesuai kebutuhan */
+   border-radius: 30px; 
+   text-decoration: none; 
+   border: #000 solid 5px; 
+   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3); 
+   border-bottom: 3px solid #ccc; 
+   background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0); 
+   flex-direction: column; 
+   align-items: center; 
+   justify-content: center; 
+   width: auto; /* Mengatur lebar otomatis sesuai dengan teks */
+   height: auto; /* Mengatur tinggi otomatis sesuai dengan teks */
+   text-align: center; /* Pusatkan teks */
+}
+
 
   .logo {
     font-family: 'arial', sans-serif;
