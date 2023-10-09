@@ -112,7 +112,6 @@ body {
     }
   }
 
-
 .button {
   display: inline-block;
   font-size: 2em;
@@ -131,6 +130,7 @@ body {
   overflow: hidden; /* Menyembunyikan teks yang melebihi lebar tombol */
   text-overflow: ellipsis; /* Mengganti teks yang terlalu panjang dengan titik-titik (...) */
 }
+
 
   .logo {
     font-family: 'arial', sans-serif;
