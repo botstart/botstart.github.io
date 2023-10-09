@@ -364,17 +364,12 @@
       var fontSize = parseFloat(window.getComputedStyle(button).fontSize);
 
       if (buttonTextWidth > buttonWidth) {
-        while (buttonTextWidth > buttonWidth && fontSize > 10) {
-          fontSize -= 1;
-          button.style.fontSize = fontSize + "px";
-          buttonTextWidth = button.scrollWidth;
-        }
+        var scaleFactor = buttonWidth / buttonTextWidth;
+        var newFontSize = fontSize * scaleFactor;
+        button.style.fontSize = newFontSize + "px";
       } else {
-        while (buttonTextWidth < buttonWidth && fontSize < 50) {
-          fontSize += 1;
-          button.style.fontSize = fontSize + "px";
-          buttonTextWidth = button.scrollWidth;
-        }
+        // Jika teks tidak terlalu panjang, kembalikan ke ukuran font awal
+        button.style.fontSize = "";
       }
     });
   }
@@ -383,5 +378,6 @@
   window.addEventListener("load", adjustButtonFontSize);
   window.addEventListener("resize", adjustButtonFontSize);
 </script>
+
   </body>
 </html>
