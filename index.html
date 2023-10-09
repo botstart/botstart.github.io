@@ -352,6 +352,26 @@
       </blockquote>
       </div>
       <br>
-       <div id="penutup"></div>  
+       <div id="penutup"></div>
+<script>
+function adjustTextSize() {
+  const button = document.getElementById("myButton");
+  const maxWidth = button.offsetWidth - 40; // Mengurangkan padding agar tidak overflow
+  const text = button.innerHTML;
+  const fontSize = 2; // Ukuran awal font
+  let currentFontSize = fontSize;
+  
+  button.style.fontSize = fontSize + "em"; // Mengatur ukuran font awal
+  
+  while (button.scrollWidth > maxWidth) {
+    currentFontSize -= 0.1; // Mengurangi ukuran font
+    button.style.fontSize = currentFontSize + "em";
+  }
+}
+
+window.onload = adjustTextSize;
+window.onresize = adjustTextSize;
+
+</script>
   </body>
 </html>
