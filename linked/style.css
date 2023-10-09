@@ -113,7 +113,7 @@ body {
   }
 
 
-.button { 
+.button, button-container { 
    display: inline-block; 
    font-size: 2em; 
    padding: 10px 20px; 
