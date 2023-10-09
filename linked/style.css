@@ -155,7 +155,7 @@ body {
   box-shadow: 0 0 20px 0 #f01f1f;
   border: 2px solid #f01f1f;
   padding: 20px 80px;
-  background-color: #000;
+  background-color: transparant;
   transition: .4s;
   font-size: 20px;
   cursor: pointer;
