@@ -112,8 +112,9 @@ body {
     }
   }
 
+
 .button {
-   font-size: 100%; /* Set ukuran font awal */
+   font-size: 2em; /* Tetapkan ukuran font tombol */
    padding: 10px 20px;
    border-radius: 30px;
    text-decoration: none;
@@ -121,11 +122,28 @@ body {
    border: #000 solid 5px;
    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
    border-bottom: 3px solid #ccc;
-   background: transparant; /*(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0);*/
+   background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0);
+   overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
-   transition: font-size 0.2s;
+   display: inline-flex; /* Menambahkan ini */
+   align-items: center; /* Menambahkan ini */
+   justify-content: center; /* Menambahkan ini */
+   max-width: 100%; /* Menambahkan ini */
 }
+
+.button span {
+   max-width: 100%; /* Menambahkan ini */
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   display: inline-block;
+}
+
+.button:hover {
+   font-size: 2em; /* Ukuran font saat tombol dihover, jika Anda ingin tetap sama */
+}
+
 
   .logo {
     font-family: 'arial', sans-serif;
