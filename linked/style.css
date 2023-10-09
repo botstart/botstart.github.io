@@ -137,16 +137,16 @@ body {
   border: 2px solid #f01f1f;
   background-color: transparent;
   transition: 0.4s;
-  font-size: 24px; /* Memperbesar ukuran font */
+  font-size: 18px; /* Sedikit lebih kecil dari sebelumnya */
   cursor: pointer;
-  color: green; /* Mengganti warna teks ke hijau */
+  color: green;
   z-index: 0;
   width: auto;
   max-width: 100%;
-  padding: 15px 60px; /* Memperbesar padding untuk tombol yang lebih besar */
+  padding: 10px 20px; /* Sesuaikan padding untuk tombol yang sedikit lebih besar */
   overflow: hidden;
   text-overflow: ellipsis;
-  text-decoration: none; /* Menghilangkan garis bawah dari teks */
+  text-decoration: none;
 }
 
   .logo {
