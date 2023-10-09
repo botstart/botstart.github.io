@@ -112,14 +112,6 @@ body {
     }
   }
 
-.button-container {
-  display: inline-flex; /* Menggunakan inline-flex agar konten menyesuaikan button */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center; /* Ini untuk teks di tengah secara horizontal */
-}
-
 .button {
    font-size: 100%; /* Set ukuran font awal */
    padding: 10px 20px;
