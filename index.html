@@ -350,7 +350,7 @@
       </blockquote>
       </div>
       <br>
-       <div id="penutup"></div>  
+       <div id="penutup"></div>
 
 <script>
   // Mendapatkan semua elemen tombol dengan kelas "button"
@@ -360,10 +360,21 @@
   function adjustButtonFontSize() {
     buttons.forEach(function (button) {
       var buttonWidth = button.offsetWidth;
+      var buttonTextWidth = button.scrollWidth;
       var fontSize = parseFloat(window.getComputedStyle(button).fontSize);
-      while (button.scrollWidth > buttonWidth) {
-        fontSize -= 1;
-        button.style.fontSize = fontSize + "px";
+
+      if (buttonTextWidth > buttonWidth) {
+        while (buttonTextWidth > buttonWidth && fontSize > 10) {
+          fontSize -= 1;
+          button.style.fontSize = fontSize + "px";
+          buttonTextWidth = button.scrollWidth;
+        }
+      } else {
+        while (buttonTextWidth < buttonWidth && fontSize < 50) {
+          fontSize += 1;
+          button.style.fontSize = fontSize + "px";
+          buttonTextWidth = button.scrollWidth;
+        }
       }
     });
   }
