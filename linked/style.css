@@ -144,7 +144,7 @@ body {
   border: 2px solid #f01f1f;
   background-color: transparent;
   transition: 0.4s;
-  font-size: 30px; /* Ukuran teks lebih besar */
+  font-size: 40px; /* Ukuran teks lebih besar */
   cursor: pointer;
   color: green; /* Teks tetap hijau */
   z-index: 0;
@@ -157,7 +157,7 @@ body {
 
 .glowing-button span {
   animation: blink 1s infinite; /* Animasi berkedip untuk teks dalam tombol */
-  font-size: 24px; /* Ukuran teks dalam tombol */
+  font-size: 40px; /* Ukuran teks dalam tombol */
 }
 
 @keyframes blink {
