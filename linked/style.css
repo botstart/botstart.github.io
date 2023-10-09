@@ -128,6 +128,13 @@ body {
     justify-content: center;
   }
 
+.button-container {
+  display: flex;
+  justify-content: space-around; /* Mengatur jarak antara tombol */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .glowing-button {
   white-space: nowrap;
   margin: 10px;
@@ -137,13 +144,12 @@ body {
   border: 2px solid #f01f1f;
   background-color: transparent;
   transition: 0.4s;
-  font-size: 24px; /* Ukuran font lebih besar */
+  font-size: 20px;
   cursor: pointer;
   color: green;
   z-index: 0;
-  width: auto;
-  max-width: 100%;
-  padding: 15px 40px; /* Padding lebih besar untuk tombol yang lebih besar */
+  min-width: 200px; /* Menetapkan ukuran minimum tombol */
+  padding: 15px 20px; /* Padding untuk tombol */
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none;
