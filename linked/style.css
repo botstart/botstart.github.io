@@ -119,19 +119,17 @@ body {
   justify-content: center;
   text-align: center; /* Ini untuk teks di tengah secara horizontal */
 }
-
-.button {
-  font-size: 2em;
-  padding: 10px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  /*color : #fff;*/
-  border: #000 solid 5px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-  border-bottom: 3px solid #ccc;
-  background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0);
-}
-
+.button { 
+   font-size: 1em; /* Menggunakan unit em */
+   padding: 10px 20px; 
+   border-radius: 30px; 
+   text-decoration: none; 
+   /*color : #fff;*/ 
+   border: #000 solid 5px; 
+   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3); 
+   border-bottom: 3px solid #ccc; 
+   background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0); 
+ }
 
   .logo {
     font-family: 'arial', sans-serif;
