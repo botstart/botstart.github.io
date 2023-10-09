@@ -113,8 +113,8 @@ body {
   }
 
 .button {
-   font-size: 100%; /* Set ukuran font awal */
-   padding: 10px 20px;
+   font-size: 100%;
+   padding: 20px 40px; /* Mengatur padding lebih besar untuk membuat tombol lebih besar */
    border-radius: 30px;
    text-decoration: none;
    /*color : #fff;*/
@@ -122,10 +122,10 @@ body {
    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
    border-bottom: 3px solid #ccc;
    background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0);
-   overflow: hidden; /* Untuk menghindari teks yang melebihi tombol */
-   white-space: nowrap; /* Untuk menghindari pemutaran baris otomatis */
-   text-overflow: ellipsis; /* Untuk mengganti teks yang terlalu panjang dengan ellipsis (...) */
-   transition: font-size 0.2s; /* Efek perubahan ukuran font dengan transisi */
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   transition: font-size 0.2s;
 }
 
 .button:hover {
