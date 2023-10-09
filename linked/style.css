@@ -156,7 +156,7 @@ body {
   transition: 0.4s;
   font-size: 20px;
   cursor: pointer;
-  color: #000;
+  color: #green;
   z-index: 0;
   width: auto; /* Biarkan ukuran tombol menyesuaikan teks */
   max-width: 100%; /* Tetapkan lebar maksimum agar tidak melebihi parent */
