@@ -128,6 +128,73 @@ body {
     justify-content: center;
   }
 
+
+.glowing-button {
+  white-space: nowrap;
+  margin: 10px;
+  position: relative;
+  background-color: #f01f1f;
+  box-shadow: 0 0 20px 0 #f01f1f;
+  border: 2px solid #f01f1f;
+  padding: 20px 80px;
+  background-color: #000;
+  transition: .4s;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  z-index: 0;
+}
+
+.glowing-button::before {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #f01f1f;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #f01f1f;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #f01f1f;
+  z-index: -1;
+}
+
+.glowing-button::after {
+  content: '';
+  width: 100%;
+  height: calc(50% + 1px);
+  background-color: #f01f1f;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #f01f1f;
+  transition: .4s;
+  box-shadow: 0 0 20px 0 #f01f1f;
+  z-index: -1;
+}
+
+.glowing-button:hover {
+  color: #f01f1f;
+}
+
+.glowing-button:hover::before {
+  width: 30px;
+  height: 10px;
+  top: -5px;
+  left: -5px;
+  transform: skewX(30deg);
+  background-color: #000;
+}
+
+.glowing-button:hover::after {
+  width: 30px;
+  height: 10px;
+  bottom: -5px;
+  right: -5px;
+  transform: skewX(-30deg);
+  background-color: #000;
+}
+
   .logo {
     font-family: 'arial', sans-serif;
     font-size: 4rem;
