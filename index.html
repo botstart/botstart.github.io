@@ -352,6 +352,26 @@
       </blockquote>
       </div>
       <br>
+
+<script>
+function adjustButtonSize() {
+  const button = document.getElementById("myButton");
+  const maxWidth = 300; // Ukuran maksimum yang Anda inginkan
+
+  if (button.scrollWidth > maxWidth) {
+    const fontSize = parseFloat(window.getComputedStyle(button).fontSize);
+    const currentWidth = button.offsetWidth;
+    const ratio = currentWidth / button.scrollWidth;
+    const newFontSize = fontSize * ratio * 0.95; // 0.95 adalah faktor pengurangan agar tidak terlalu kecil
+    button.style.fontSize = newFontSize + "px";
+  }
+}
+
+window.onload = adjustButtonSize;
+window.onresize = adjustButtonSize;
+
+</script>
+
        <div id="penutup"></div>  
   </body>
 </html>
