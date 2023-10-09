@@ -353,30 +353,16 @@
        <div id="penutup"></div>
 
 <script>
-  // Mendapatkan semua elemen tombol dengan kelas "button"
-  var buttons = document.querySelectorAll(".button");
+var buttons = document.querySelectorAll(".button");
 
-  // Fungsi untuk menyesuaikan ukuran font agar sesuai dengan lebar tombol
-  function adjustButtonFontSize() {
-    buttons.forEach(function (button) {
-      var buttonWidth = button.offsetWidth;
-      var buttonTextWidth = button.scrollWidth;
-      var fontSize = parseFloat(window.getComputedStyle(button).fontSize);
-
-      if (buttonTextWidth > buttonWidth) {
-        var scaleFactor = buttonWidth / buttonTextWidth;
-        var newFontSize = fontSize * scaleFactor;
-        button.style.fontSize = newFontSize + "px";
-      } else {
-        // Jika teks tidak terlalu panjang, kembalikan ke ukuran font awal
-        button.style.fontSize = "";
-      }
-    });
+buttons.forEach(function(button) {
+  if (button.scrollWidth > button.clientWidth) {
+    var fontSize = parseFloat(getComputedStyle(button).fontSize);
+    fontSize *= button.clientWidth / button.scrollWidth;
+    button.style.fontSize = fontSize + "px";
   }
+});
 
-  // Panggil fungsi ketika halaman dimuat dan saat ukuran jendela berubah
-  window.addEventListener("load", adjustButtonFontSize);
-  window.addEventListener("resize", adjustButtonFontSize);
 </script>
 
   </body>
