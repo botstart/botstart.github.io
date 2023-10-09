@@ -10,6 +10,26 @@
     <script src="/linked/names.js"></script>  
      <script src="/linked/speed.js"></script>  
       <script src="/linked/teks-config.js"></script>
+
+<script>
+function adjustButtonSize() {
+  const button = document.getElementById("myButton");
+  const maxWidth = 300; // Ukuran maksimum yang Anda inginkan
+
+  if (button.scrollWidth > maxWidth) {
+    const fontSize = parseFloat(window.getComputedStyle(button).fontSize);
+    const currentWidth = button.offsetWidth;
+    const ratio = currentWidth / button.scrollWidth;
+    const newFontSize = fontSize * ratio * 0.95; // 0.95 adalah faktor pengurangan agar tidak terlalu kecil
+    button.style.fontSize = newFontSize + "px";
+  }
+}
+
+window.onload = adjustButtonSize;
+window.onresize = adjustButtonSize;
+
+</script>
+
     <title>Update Config Aplikasi Gretongan</title>
   </head>
   <body>
