@@ -1,6 +1,12 @@
-  html {
-    scroll-behavior: smooth;
-  }
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #f01f1f;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
 
 body {
   font-family: 'verdana', 'arial', 'verdana', 'sans-serif';
@@ -128,6 +134,18 @@ body {
     justify-content: center;
   }
 
+
+.glowing-button-wrap {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+}
+  html {
+    scroll-behavior: smooth;
+  }
 
 .glowing-button {
   white-space: nowrap;
