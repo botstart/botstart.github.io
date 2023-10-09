@@ -121,7 +121,7 @@ body {
 }
 
 .button {
-   font-size: 2em;
+   font-size: 100%; /* Set ukuran font awal */
    padding: 10px 20px;
    border-radius: 30px;
    text-decoration: none;
@@ -133,6 +133,11 @@ body {
    overflow: hidden; /* Untuk menghindari teks yang melebihi tombol */
    white-space: nowrap; /* Untuk menghindari pemutaran baris otomatis */
    text-overflow: ellipsis; /* Untuk mengganti teks yang terlalu panjang dengan ellipsis (...) */
+   transition: font-size 0.2s; /* Efek perubahan ukuran font dengan transisi */
+}
+
+.button:hover {
+   font-size: 80%; /* Ukuran font saat tombol dihover */
 }
 
   .logo {
