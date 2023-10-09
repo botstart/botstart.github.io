@@ -330,21 +330,5 @@
       <br>
        <div id="penutup"></div>
 
-<script>
-var buttons = document.querySelectorAll(".button");
-
-buttons.forEach(function(button) {
-  var buttonText = button.textContent;
-  var buttonWidth = button.offsetWidth;
-  var fontSize = 20; // Ukuran font awal
-
-  while (button.scrollWidth > buttonWidth && fontSize > 10) {
-    fontSize--;
-    button.style.fontSize = fontSize + "px";
-  }
-});
-
-</script>
-
   </body>
 </html>
