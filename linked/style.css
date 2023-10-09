@@ -140,7 +140,7 @@ body {
   margin: 10px;
   position: relative;
   background-color: transparent;
-  box-shadow: 0 0 20px 0 white; /* Mengubah warna shadow teks menjadi putih */
+  box-shadow: 0 0 20px 0 red; /* Mengubah warna shadow teks menjadi putih */
   border: 2px solid #f01f1f;
   background-color: transparent;
   transition: 0.4s;
@@ -153,6 +153,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none;
+  text-shadow: 0 0 10px white;
 }
 
   .logo {
