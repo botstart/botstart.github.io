@@ -137,13 +137,13 @@ body {
   border: 2px solid #f01f1f;
   background-color: transparent;
   transition: 0.4s;
-  font-size: 18px; /* Sedikit lebih kecil dari sebelumnya */
+  font-size: 24px; /* Ukuran font lebih besar */
   cursor: pointer;
   color: green;
   z-index: 0;
   width: auto;
   max-width: 100%;
-  padding: 10px 20px; /* Sesuaikan padding untuk tombol yang sedikit lebih besar */
+  padding: 15px 40px; /* Padding lebih besar untuk tombol yang lebih besar */
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none;
