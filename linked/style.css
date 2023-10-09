@@ -112,11 +112,10 @@ body {
     }
   }
 
-
 .button { 
    display: inline-block; 
-   font-size: 2em; 
-   padding: 0.5em 1em; /* Sesuaikan padding sesuai kebutuhan */
+   font-size: 2em; /* Anda bisa menyesuaikan ukuran font sesuai kebutuhan */
+   padding: 10px 20px; 
    border-radius: 30px; 
    text-decoration: none; 
    border: #000 solid 5px; 
@@ -126,9 +125,9 @@ body {
    flex-direction: column; 
    align-items: center; 
    justify-content: center; 
-   width: auto; /* Mengatur lebar otomatis sesuai dengan teks */
-   height: auto; /* Mengatur tinggi otomatis sesuai dengan teks */
-   text-align: center; /* Pusatkan teks */
+   width: auto; 
+   height: auto; 
+   text-align: center; 
 }
 
 
