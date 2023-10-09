@@ -128,10 +128,6 @@ body {
     justify-content: center;
   }
 
-.glowing-button-wrap {
-  text-align: center;
-}
-
 .glowing-button {
   white-space: nowrap;
   margin: 10px;
