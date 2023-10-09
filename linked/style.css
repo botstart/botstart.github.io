@@ -164,6 +164,13 @@ body {
   width: auto; /* Biarkan ukuran tombol menyesuaikan teks */
   max-width: 100%; /* Tetapkan lebar maksimum agar tidak melebihi parent */
   padding: 10px 40px; /* Padding yang lebih kecil untuk menjaga ukuran tombol tetap */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Menampilkan teks sebagai titik-titik jika terlalu panjang */
+}
+
+.glowing-button:hover {
+  text-transform: scale(0.8); /* Mengurangi ukuran teks saat tombol dihover */
+  transition: 0.4s;
 }
 
   .logo {
