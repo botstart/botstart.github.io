@@ -41,30 +41,36 @@
 <script>
 var slideContainer = document.querySelector('.slideshow-container');
 var slideIndex = 0;
+var isAnimating = false;
 
 function handleScroll(event) {
-  // Mendeteksi arah scroll
+  if (isAnimating) return;
   if (event.deltaX > 0) {
     // Scroll ke kanan
-    slideIndex++;
+    showSlides(slideIndex + 1);
   } else if (event.deltaX < 0) {
     // Scroll ke kiri
-    slideIndex--;
+    showSlides(slideIndex - 1);
   }
+}
 
-  // Batasi slideIndex agar tidak keluar dari jangkauan gambar
-  slideIndex = Math.max(0, Math.min(slideIndex, document.querySelectorAll('.mySlides').length - 1));
+function showSlides(n) {
+  if (isAnimating) return;
+  isAnimating = true;
+  
+  var slides = document.querySelectorAll('.mySlides');
 
-  // Geser slide container secara horizontal
+  slideIndex = (n + slides.length) % slides.length;
+
   slideContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+  setTimeout(function() {
+    isAnimating = false;
+  }, 300); // Durasi animasi dalam milidetik
 }
 
 function autoSlide() {
-  slideIndex++;
-  // Batasi slideIndex agar tidak keluar dari jangkauan gambar
-  slideIndex = slideIndex % document.querySelectorAll('.mySlides').length;
-  // Geser slide container secara horizontal
-  slideContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+  showSlides(slideIndex + 1);
   setTimeout(autoSlide, 2000); // Ubah gambar secara otomatis setiap 2 detik
 }
 
