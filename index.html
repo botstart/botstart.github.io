@@ -13,45 +13,62 @@
     <title>Update Config Aplikasi Gretongan</title>
 
   <style media="screen">
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-color: #7aacff;
-      }
-      .container-slide { 
-      width: 500px; 
-      margin: 0 auto; /* Ini akan mengatur elemen di tengah horizontal halaman */
-      overflow: hidden; 
-      border: 10px solid #ffffff; 
-      border-radius: 8px; 
-      box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3); 
-      }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-      .wrapper {
-        width: 500%; /* Mengatur lebar container untuk slide gambar */
-        display: flex;
-        animation: slide 16s infinite;
-      }
-      @keyframes slide {
-        0%, 100% {
-          transform: translateX(0);
-        }
-        25% {
-          transform: translateX(0);
-        }
-        30%, 50% {
-          transform: translateX(-25%);
-        }
-        55%, 75% {
-          transform: translateX(-50%);
-        }
-        80% {
-          transform: translateX(-75%);
-        }
-      }
+body {
+    background-color: #7aacff;
+}
+
+.container-slide {
+    width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 10px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+    width: 700%; /* Sesuaikan dengan jumlah gambar */
+    display: flex;
+    animation: slide 16s infinite;
+    overflow: hidden; /* Menyembunyikan gambar yang tidak terlihat */
+}
+
+.wrapper img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0; /* Agar gambar tidak mengecil saat ukuran container berubah */
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    14.29% {
+        transform: translateX(0);
+    }
+    28.57% {
+        transform: translateX(-100%);
+    }
+    42.86% {
+        transform: translateX(-100%);
+    }
+    57.14% {
+        transform: translateX(-200%);
+    }
+    71.43% {
+        transform: translateX(-200%);
+    }
+    85.71% {
+        transform: translateX(-300%);
+    }
+}
+
     </style>
 </head>
 <body>
