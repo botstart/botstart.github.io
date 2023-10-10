@@ -34,15 +34,15 @@ body {
 }
 
 .wrapper {
-  width: 700%; /* Ubah lebar .wrapper menjadi 700% (7 gambar x 100%) */
+  width: 1400%; /* Ubah lebar .wrapper menjadi 1400% (7 gambar x 200%) */
   display: flex;
-  animation: slide 16s linear infinite;
+  animation: slide 20s linear infinite; /* Ubah durasi animasi menjadi 20 detik */
 }
 
 .slide {
-  flex: 1; /* Setiap gambar mengambil lebar yang sama dalam container */
-  min-width: 500px; /* Sesuaikan dengan lebar container-slide */
-  height: auto; /* Biarkan tinggi gambar menyesuaikan */
+  flex: 1;
+  min-width: 500px;
+  height: auto;
 }
 
 @keyframes slide {
@@ -69,7 +69,7 @@ body {
   }
 }
 
-    </style>
+</style>
 </head>
 <body>
      <div id="header"></div>
