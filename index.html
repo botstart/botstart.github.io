@@ -36,20 +36,15 @@ body {
 .wrapper {
   width: 700%; /* Ubah lebar .wrapper menjadi 700% (7 gambar x 100%) */
   display: flex;
-  animation: slide 20s linear infinite; /* Ubah durasi menjadi 20 detik */
-  overflow: hidden; /* Tambahkan overflow: hidden; agar gambar yang terslide tidak terlihat di luar container */
+  animation: slide 16s linear infinite;
 }
 
 .slide {
-  flex: 1;
-  min-width: 500px;
-  height: auto;
-  display: flex; /* Tambahkan display: flex; untuk mengatur gambar di tengah vertikal */
-  justify-content: center; /* Tambahkan justify-content: center; untuk mengatur gambar di tengah horizontal */
-  align-items: center; /* Tambahkan align-items: center; untuk mengatur gambar di tengah vertikal */
+  flex: 1; /* Setiap gambar mengambil lebar yang sama dalam container */
+  min-width: 500px; /* Sesuaikan dengan lebar container-slide */
+  height: auto; /* Biarkan tinggi gambar menyesuaikan */
 }
 
-/* Sesuaikan transformasi dengan jumlah gambar (7 gambar) */
 @keyframes slide {
   0%, 100% {
     transform: translateX(0);
@@ -73,6 +68,7 @@ body {
     transform: translateX(-500%);
   }
 }
+
     </style>
 </head>
 <body>
