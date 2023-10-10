@@ -39,36 +39,37 @@
   </div>
 </div>
 <script>
-var currentSlide = 1;
 var slideContainer = document.querySelector('.slideshow-container');
+var slideIndex = 0;
 
 function handleScroll(event) {
   // Mendeteksi arah scroll
   if (event.deltaX > 0) {
     // Scroll ke kanan
-    showSlides(currentSlide += 1);
+    slideIndex++;
   } else if (event.deltaX < 0) {
     // Scroll ke kiri
-    showSlides(currentSlide -= 1);
+    slideIndex--;
   }
+
+  // Batasi slideIndex agar tidak keluar dari jangkauan gambar
+  slideIndex = Math.max(0, Math.min(slideIndex, document.querySelectorAll('.mySlides').length - 1));
+
+  // Geser slide container secara horizontal
+  slideContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
 }
 
-function showSlides(n) {
-  var slides = document.getElementsByClassName("mySlides");
-  
-  if (n > slides.length) {
-    currentSlide = 1;
-  }
-  if (n < 1) {
-    currentSlide = slides.length;
-  }
-  
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  
-  slides[currentSlide - 1].style.display = "inline-block";
+function autoSlide() {
+  slideIndex++;
+  // Batasi slideIndex agar tidak keluar dari jangkauan gambar
+  slideIndex = slideIndex % document.querySelectorAll('.mySlides').length;
+  // Geser slide container secara horizontal
+  slideContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+  setTimeout(autoSlide, 2000); // Ubah gambar secara otomatis setiap 2 detik
 }
+
+// Panggil autoSlide() untuk memulai otomatisasi
+autoSlide();
 
 </script>
 <br>
