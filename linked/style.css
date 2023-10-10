@@ -343,12 +343,13 @@ body {
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
+
 /* Gaya CSS untuk slide show */
 .slideshow-container {
   width: 100%;
   position: relative;
   margin: auto;
-  overflow: hidden; /* Untuk menghilangkan scroll horizontal jika gambar lebih besar dari layar */
+  overflow: hidden;
 }
 
 .mySlides {
@@ -358,10 +359,11 @@ body {
 img {
   width: 100%;
   height: auto;
+  object-fit: cover; /* Membuat gambar mengisi seluruh lebar layar tanpa kehilangan aspek ratio */
 }
 
-/* Gaya CSS untuk gambar yang mengisi ke kiri layar */
-.left-align img {
-  object-fit: cover;
-  object-position: left;
+/* Gaya CSS untuk bingkai yang indah */
+.frame {
+  border: 5px solid #333;
+  padding: 10px;
 }
