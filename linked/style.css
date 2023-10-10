@@ -343,55 +343,25 @@ body {
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
-/* Reset beberapa gaya default */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Gaya dasar untuk slider */
-.slider {
-    width: 100%;
-    overflow: hidden;
-}
+    /* Gaya CSS untuk slide show */
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+    }
 
-/* Gaya untuk setiap slide */
-.slide {
-    float: left;
-    width: 100%;
-    position: relative;
-    transition: transform 0.5s ease-in-out; /* Efek animasi saat slide berubah */
-}
+    .mySlides {
+      display: none;
+    }
 
-/* Gaya untuk gambar di dalam slide */
-.slide img {
-    width: 100%;
-    height: auto;
-}
+    img {
+      width: 100%;
+      height: auto;
+    }
 
-/* Gaya untuk tampilan tombol navigasi jika diperlukan */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 18px;
-    z-index: 1;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-/* Gaya untuk tombol navigasi saat hover */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+    /* Gaya CSS untuk bingkai yang indah */
+    .frame {
+      border: 5px solid #333;
+      padding: 10px;
+    }
