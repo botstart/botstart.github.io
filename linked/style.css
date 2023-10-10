@@ -356,17 +356,17 @@ body {
     width: 100%;
     position: absolute;
     top: 0;
-    right: 100%;
+    left: 100%;
     animation: slide 5s linear infinite;
   }
 
   /* Animasi slide */
   @keyframes slide {
     0% {
-      right: 100%;
+      left: 100%;
     }
     100% {
-      right: 0;
+      left: 0;
     }
   }
 
