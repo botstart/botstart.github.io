@@ -344,26 +344,30 @@ body {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-    /* Gaya CSS untuk slide show */
-    .slideshow-container {
-      max-width: 800px;
-      position: relative;
-      margin: auto;
-      overflow: hidden; /* Menyembunyikan gambar yang melebihi container */
-    }
+  /* Gaya untuk slideshow */
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
 
-    .mySlides {
-      display: inline-block; /* Menampilkan gambar secara berdampingan */
-      transition: transform 1s; /* Animasi perpindahan */
-    }
+  /* Gaya untuk gambar slideshow */
+  .mySlides {
+    display: none;
+  }
 
-    img {
-      width: 100%;
-      height: auto;
-    }
+  /* Efek fade */
+  .fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
 
-    /* Gaya CSS untuk bingkai yang indah */
-    .frame {
-      border: 5px solid #333;
-      padding: 10px;
+  @keyframes fade {
+    0% {
+      opacity: 0.4;
     }
+    100% {
+      opacity: 1;
+    }
+  }
+
