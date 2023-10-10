@@ -343,16 +343,23 @@ body {
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
+
+
 /* Gaya CSS untuk slide show */
 .slideshow-container {
   max-width: 800px;
   position: relative;
   margin: auto;
   overflow: hidden;
+  white-space: nowrap; /* Mencegah wrap konten */
+  overflow-x: auto; /* Membuat slide dapat digulir secara horizontal */
+  -webkit-overflow-scrolling: touch; /* Dukungan untuk scrolling pada perangkat sentuh */
 }
 
 .mySlides {
-  display: none;
+  display: inline-block; /* Menampilkan slide dalam satu baris */
+  vertical-align: top; /* Menghindari pergeseran vertikal */
+  white-space: normal; /* Mengizinkan wrap konten dalam slide */
 }
 
 .mySlides img {
