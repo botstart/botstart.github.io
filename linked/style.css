@@ -348,6 +348,7 @@ body {
   width: 100%;
   position: relative;
   margin: auto;
+  overflow: hidden; /* Untuk menghilangkan scroll horizontal jika gambar lebih besar dari layar */
 }
 
 .mySlides {
@@ -359,8 +360,8 @@ img {
   height: auto;
 }
 
-/* Gaya CSS untuk bingkai yang indah */
-.frame {
-  border: 5px solid #333;
-  padding: 10px;
+/* Gaya CSS untuk gambar yang mengisi ke kiri layar */
+.left-align img {
+  object-fit: cover;
+  object-position: left;
 }
