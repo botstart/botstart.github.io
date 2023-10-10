@@ -144,7 +144,7 @@ body {
   border: 2px solid #f01f1f;
   background-color: transparent;
   transition: 0.4s;
-  font-size: 50px; /* Ukuran teks lebih besar */
+  font-size: 40px; /* Ukuran teks lebih besar */
   cursor: pointer;
   color: green; /* Teks tetap hijau */
   z-index: 0;
