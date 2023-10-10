@@ -343,24 +343,55 @@ body {
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
+/* Reset beberapa gaya default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    .slideshow-container {
-      width: 85vmin;
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
-      overflow: hidden;
-      border: 10px solid #ffffff;
-      border-radius: 8px;
-      box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
-    }
+/* Gaya dasar untuk slider */
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
 
-    .mySlides {
-      display: flex;
-      transition: transform 1s ease-in-out;
-    }
+/* Gaya untuk setiap slide */
+.slide {
+    float: left;
+    width: 100%;
+    position: relative;
+    transition: transform 0.5s ease-in-out; /* Efek animasi saat slide berubah */
+}
 
-    img {
-      width: 100%;
-    }
+/* Gaya untuk gambar di dalam slide */
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Gaya untuk tampilan tombol navigasi jika diperlukan */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Gaya untuk tombol navigasi saat hover */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
