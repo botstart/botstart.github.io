@@ -364,3 +364,29 @@ body {
 img{
     width: 100%;
 }
+@keyframes geser{
+    0%{
+        mengubah: translateX(0);
+    }
+    25%{
+        mengubah: translateX(0);
+    }
+    30%{
+        mengubah: translateX(-100%);
+    }
+    50%{
+        mengubah: translateX(-100%);
+    }
+    55%{
+        mengubah: translateX(-200%);
+    }
+    75%{
+        mengubah: translateX(-200%);
+    }
+    80%{
+        mengubah: translateX(-300%);
+    }
+    100%{
+        mengubah: translateX(-300%);
+    }
+}
