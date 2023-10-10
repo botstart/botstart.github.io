@@ -372,7 +372,7 @@ body {
 
   /* Gaya untuk mengatur gambar */
   .mySlides img {
-    width: 100%;
-    height: auto;
+    max-width: 100%; /* Gambar akan mengikuti lebar div .mySlides */
+    height: auto; /* Gambar akan menyesuaikan tinggi secara proporsional */
   }
 
