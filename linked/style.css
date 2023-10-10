@@ -356,23 +356,42 @@ body {
     width: 100%;
     position: absolute;
     top: 0;
-    right: 100%; /* Gambar akan dimulai di luar layar sebelah kanan */
-    animation: slide 5s linear infinite; /* Ganti durasi sesuai kebutuhan */
+    right: 100%;
+    animation: slide 5s linear infinite;
   }
 
   /* Animasi slide */
   @keyframes slide {
     0% {
-      right: 100%; /* Mulai di luar layar sebelah kanan */
+      right: 100%;
     }
     100% {
-      right: 0; /* Akhir di layar */
+      right: 0;
     }
   }
 
   /* Gaya untuk mengatur gambar */
   .mySlides img {
-    max-width: 100%; /* Gambar akan mengikuti lebar div .mySlides */
-    height: auto; /* Gambar akan menyesuaikan tinggi secara proporsional */
+    max-width: 100%;
+    height: auto;
   }
 
+  /* Gaya untuk indikator */
+  .dot-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #717171;
+  }
