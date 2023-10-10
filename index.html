@@ -13,63 +13,46 @@
     <title>Update Config Aplikasi Gretongan</title>
 
   <style media="screen">
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #7aacff;
+      }
+      .container-slide { 
+      width: 500px; 
+      margin: 0 auto; /* Ini akan mengatur elemen di tengah horizontal halaman */
+      overflow: hidden; 
+      border: 10px solid #ffffff; 
+      border-radius: 8px; 
+      box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3); 
+      }
 
-body {
-  background-color: #7aacff;
-}
-
-.container-slide {
-  width: 500px;
-  margin: 0 auto;
-  overflow: hidden;
-  border: 10px solid #ffffff;
-  border-radius: 8px;
-  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Mengatur 7 kolom untuk 7 gambar */
-  animation: slide 16s linear infinite;
-}
-
-.slide {
-  min-width: 500px;
-  height: auto;
-  transition: transform 1s ease-in-out; /* Menambah efek perpindahan yang lebih halus */
-}
-
-@keyframes slide {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  0%, 14.29% {
-    transform: translateX(0);
-  }
-  14.3%, 28.57% {
-    transform: translateX(-100%);
-  }
-  28.58%, 42.86% {
-    transform: translateX(-200%);
-  }
-  42.87%, 57.14% {
-    transform: translateX(-300%);
-  }
-  57.15%, 71.43% {
-    transform: translateX(-400%);
-  }
-  71.44%, 85.72% {
-    transform: translateX(-500%);
-  }
-}
-
-</style>
+      .wrapper {
+        width: 500%; /* Mengatur lebar container untuk slide gambar */
+        display: flex;
+        animation: slide 16s infinite;
+      }
+      @keyframes slide {
+        0%, 100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(0);
+        }
+        30%, 50% {
+          transform: translateX(-25%);
+        }
+        55%, 75% {
+          transform: translateX(-50%);
+        }
+        80% {
+          transform: translateX(-75%);
+        }
+      }
+    </style>
 </head>
 <body>
      <div id="header"></div>
@@ -81,8 +64,6 @@ body {
              <img src="/assets/images/gambar3.png"> 
              <img src="/assets/images/gambar4.png"> 
              <img src="/assets/images/gambar5.png"> 
-             <img src="/assets/images/gambar6.png"> 
-             <img src="/assets/images/gambar7.png"> 
          </div>
     </div>
   <br>
