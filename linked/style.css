@@ -346,16 +346,13 @@ body {
 
   /* Gaya untuk slideshow */
   .slideshow-container {
-    max-width: 100%;
     overflow: hidden;
   }
 
   /* Gaya untuk gambar slideshow */
   .mySlides {
-    display: none;
     width: 100%;
-    position: absolute;
-    animation: slide 2s ease-in-out infinite;
+    float: left;
   }
 
   /* Animasi slide */
@@ -366,5 +363,10 @@ body {
     100% {
       transform: translateX(-100%);
     }
+  }
+
+  /* Gaya untuk mengatur animasi slide */
+  .mySlides img {
+    animation: slide 5s linear infinite; /* Ganti durasi sesuai kebutuhan */
   }
 
