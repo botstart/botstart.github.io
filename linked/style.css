@@ -343,18 +343,7 @@ body {
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
-/* Gaya CSS untuk slide show */
-.slideshow-container {
-  width: 600px; /* Atur lebar slide show sesuai kebutuhan */
-  height: 400px; /* Atur tinggi slide show sesuai kebutuhan */
-  position: relative;
-  margin: auto;
-  overflow: hidden; /* Menambahkan overflow: hidden untuk memastikan gambar yang lebih besar tetap dalam batas slide show */
-}
 
-.mySlides {
-  display: none;
-}
 /* Gaya CSS untuk gambar dalam slide */
 .mySlides img {
   width: 100%; /* Mengatur lebar gambar ke maksimum lebar slide show */
