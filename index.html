@@ -38,15 +38,14 @@
     <img src="/assets/images/gambar7.png" alt="Deskripsi Gambar 7">
   </div>
 </div>
-
 <script>
   // JavaScript untuk mengatur slide show
   var slideIndex = 0;
+  var slides = document.getElementsByClassName("mySlides");
   showSlides();
 
   function showSlides() {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
@@ -54,8 +53,17 @@
     if (slideIndex > slides.length) { slideIndex = 1; }
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 2000); // Ganti gambar setiap 2 detik
+    moveSlide();
+  }
+
+  function moveSlide() {
+    var marginLeft = -100 * (slideIndex - 1) + "vw"; // Menggeser dalam satuan viewport width
+    var slideshowContainer = document.querySelector(".slideshow-container");
+    slideshowContainer.style.transition = "margin-left 1s ease-in-out";
+    slideshowContainer.style.marginLeft = marginLeft;
   }
 </script>
+
 <br>
     <!-- isi konten -->
     <p style="text-align: center;"><a class="logo">Update Gretongan</a></p>
