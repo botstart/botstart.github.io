@@ -343,38 +343,30 @@ body {
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
-/* Style untuk container slider */
-.slider-container {
-    position: relative;
-    overflow: hidden;
-}
 
-/* Style untuk slider */
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
 
-.slide {
-    min-width: 100%;
-}
+    /* Gaya CSS untuk slide show */
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+    }
 
-/* Style untuk indikator */
-.indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
+    .mySlides {
+      position: absolute;
+      width: 100%;
+      opacity: 0; /* Semua gambar awalnya tidak terlihat */
+      transition: opacity 1s ease-in-out;
+    }
 
-.indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #888;
-    margin: 0 5px;
-    border-radius: 50%;
-    cursor: pointer;
-}
+    img {
+      width: 100%;
+      height: auto;
+    }
 
-.indicator.active {
-    background-color: #333;
-}
+    /* Gaya CSS untuk bingkai yang indah */
+    .frame {
+      border: 5px solid #333;
+      padding: 10px;
+    }
