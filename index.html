@@ -12,51 +12,52 @@
       <script src="/linked/teks-config.js"></script>
     <title>Update Config Aplikasi Gretongan</title>
   <style media="screen">
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background-color: #7aacff;
-    }
-    .container-slide {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      overflow: hidden;
-      border: 10px solid #ffffff;
-      border-radius: 8px;
-      box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
-    }
-    .slider {
-      width: 100%; /* Lebar slider sesuai kebutuhan Anda */
-      display: flex;
-      animation: slide 16s infinite;
-    }
-    @keyframes slide {
-      0%, 100% {
-        transform: translateX(0);
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
       }
-      25% {
-        transform: translateX(0);
+      body {
+        background-color: #7aacff;
       }
-      30%, 50% {
-        transform: translateX(-25%);
+      .container-slide {
+        width: 500px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        overflow: hidden;
+        border: 10px solid #ffffff;
+        border-radius: 8px;
+        box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
       }
-      55%, 75% {
-        transform: translateX(-50%);
+      .wrapper {
+        width: 400%; /* Mengatur lebar container untuk slide gambar */
+        display: flex;
+        animation: slide 16s infinite;
       }
-      80% {
-        transform: translateX(-75%);
+      @keyframes slide {
+        0%, 100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(0);
+        }
+        30%, 50% {
+          transform: translateX(-25%);
+        }
+        55%, 75% {
+          transform: translateX(-50%);
+        }
+        80% {
+          transform: translateX(-75%);
+        }
       }
-    }
-    .slide-item {
-      width: 100%; /* Lebar gambar sesuai kebutuhan Anda */
-      height: auto; /* Untuk menjaga aspek ratio */
-    }
-  </style>
+      img {
+        width: 25%; /* Mengatur lebar gambar dalam container */
+        flex-shrink: 0; /* Mencegah gambar menjadi terlalu kecil */
+      }
+    </style>
 </head>
 <body>
      <div id="header"></div>
