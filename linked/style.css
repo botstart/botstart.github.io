@@ -343,6 +343,15 @@ body {
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #7aacff;
+}
 .container-slide { 
   width: 500px; 
   margin: 0 auto; /* Ini akan mengatur elemen di tengah horizontal halaman */
