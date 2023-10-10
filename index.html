@@ -34,17 +34,15 @@ body {
 }
 
 .wrapper {
-  width: 700%; /* Mengatur lebar .wrapper menjadi 700% (7 gambar x 100%) */
-  display: flex;
-  animation: slide 28s infinite; /* Mengubah durasi animasi menjadi 28 detik (atau sesuai keinginan Anda) */
-  overflow: hidden; /* Menambah overflow: hidden pada .wrapper */
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Mengatur 7 kolom untuk 7 gambar */
+  animation: slide 16s linear infinite;
 }
 
 .slide {
-  flex: 1;
   min-width: 500px;
   height: auto;
-  margin-right: 10px; /* Menambah margin-right untuk memberikan jarak antara gambar */
+  transition: transform 1s ease-in-out; /* Menambah efek perpindahan yang lebih halus */
 }
 
 @keyframes slide {
