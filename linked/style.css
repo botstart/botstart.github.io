@@ -346,7 +346,6 @@ body {
 
   /* Gaya untuk slideshow */
   .slideshow-container {
-    position: relative;
     max-width: 100%;
     overflow: hidden;
   }
@@ -356,17 +355,16 @@ body {
     display: none;
     width: 100%;
     position: absolute;
-    top: 0;
-    left: 100%; /* Gambar akan dimulai di luar layar sebelah kanan */
-    animation: slide 2s linear infinite; /* Ganti durasi sesuai kebutuhan */
+    animation: slide 2s ease-in-out infinite;
   }
 
+  /* Animasi slide */
   @keyframes slide {
     0% {
-      left: 100%; /* Mulai di luar layar sebelah kanan */
+      transform: translateX(100%);
     }
     100% {
-      left: 0; /* Akhir di layar */
+      transform: translateX(-100%);
     }
   }
 
