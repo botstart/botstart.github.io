@@ -44,27 +44,15 @@
   showSlides();
 
   function showSlides() {
-    var i;
     var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.transform = "translateX(-" + slideIndex + "00%)"; // Geser gambar ke kiri
     }
     slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    slides[slideIndex - 1].style.display = "block";
+    if (slideIndex >= slides.length) { slideIndex = 0; }
     setTimeout(showSlides, 2000); // Ganti gambar setiap 2 detik
-    slideTransition();
-  }
-
-  function slideTransition() {
-    var slides = document.getElementsByClassName("mySlides");
-    var currentIndex = slideIndex - 1;
-    var nextIndex = (slideIndex % slides.length);
-    slides[currentIndex].style.animation = "slide-out 1s ease-in-out";
-    slides[nextIndex].style.animation = "slide-in 1s ease-in-out";
   }
 </script>
-
 <br>
     <!-- isi konten -->
     <p style="text-align: center;"><a class="logo">Update Gretongan</a></p>
