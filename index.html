@@ -47,22 +47,15 @@
   function showSlides() {
     var slides = document.getElementsByClassName("mySlides");
     for (var i = 0; i < slides.length; i++) {
-      slides[i].style.transform = "translateX(" + slideIndex * 100 + "%)"; // Geser gambar ke kiri
+      slides[i].style.transform = "translateX(-" + slideIndex * 100 + "%)"; // Menggeser gambar ke kiri
     }
     slideIndex++;
-    if (slideIndex >= slides.length) {
-      slideIndex = 0;
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].style.transition = "none"; // Hentikan transisi sementara
-        slides[i].style.transform = "translateX(0)"; // Kembali ke awal
-        slides[i].offsetWidth; // Jeda ke tampilan awal
-        slides[i].style.transition = "transform 1s ease-in-out"; // Aktifkan transisi kembali
-      }
+    if (slideIndex >= slides.length) { 
+      slideIndex = 0; // Kembali ke gambar pertama setelah mencapai yang terakhir
     }
     setTimeout(showSlides, 2000); // Ganti gambar setiap 2 detik
   }
 </script>
-
 <br>
     <!-- isi konten -->
     <p style="text-align: center;"><a class="logo">Update Gretongan</a></p>
