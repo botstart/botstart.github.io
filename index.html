@@ -33,8 +33,9 @@
 
   function showSlides() {
     var slides = document.querySelector('.mySlides');
+    var images = slides.querySelectorAll('img');
     slideIndex++;
-    if (slideIndex > slides.children.length) {
+    if (slideIndex > images.length) {
       slideIndex = 1;
     }
     var translateX = -(slideIndex - 1) * 100;
@@ -42,6 +43,7 @@
     setTimeout(showSlides, 2000); // Ganti gambar setiap 2 detik
   }
 </script>
+
 <br>
     <!-- isi konten -->
     <p style="text-align: center;"><a class="logo">Update Gretongan</a></p>
