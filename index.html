@@ -23,6 +23,16 @@ body {
   background-color: #7aacff;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #7aacff;
+}
+
 .container-slide {
   width: 500px;
   margin: 0 auto;
@@ -30,13 +40,13 @@ body {
   border: 10px solid #ffffff;
   border-radius: 8px;
   box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
-  position: relative; /* Tambahkan properti posisi relatif */
+  position: relative;
 }
 
 .wrapper {
-  width: 100%; /* Ubah lebar .wrapper menjadi 100% */
+  width: 700%; /* Ubah lebar .wrapper menjadi 700% (7 gambar x 100%) */
   display: flex;
-  animation: slide 16s linear infinite; /* Ubah ke linear dan hapus persentase */
+  animation: slide 16s linear infinite;
 }
 
 .slide {
@@ -49,17 +59,23 @@ body {
   0%, 100% {
     transform: translateX(0);
   }
-  25% {
+  0.71%, 14.29% {
     transform: translateX(0);
   }
-  30%, 50% {
-    transform: translateX(-100%); /* Geser gambar sejauh satu gambar penuh */
+  14.3%, 28.57% {
+    transform: translateX(-100%);
   }
-  55%, 75% {
-    transform: translateX(-200%); /* Geser gambar sejauh dua gambar penuh */
+  28.58%, 42.86% {
+    transform: translateX(-200%);
   }
-  80% {
-    transform: translateX(-300%); /* Geser gambar sejauh tiga gambar penuh */
+  42.87%, 57.14% {
+    transform: translateX(-300%);
+  }
+  57.15%, 71.43% {
+    transform: translateX(-400%);
+  }
+  71.44%, 85.72% {
+    transform: translateX(-500%);
   }
 }
 
