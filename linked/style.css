@@ -343,3 +343,39 @@ body {
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
+.container-slide { 
+  width: 500px; 
+  margin: 0 auto; /* Ini akan mengatur elemen di tengah horizontal halaman */
+  overflow: hidden; 
+  border: 10px solid #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3); 
+}
+.wrapper {
+  width: 500%; /* Mengatur lebar container untuk slide gambar */
+  display: flex;
+  animation: slide 16s infinite;
+}
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30%, 50% {
+    transform: translateX(-25%);
+  }
+  55%, 75% {
+    transform: translateX(-50%);
+  }
+  80% {
+    transform: translateX(-75%);
+  }
+}
+img {
+  width: 25%; /* Mengatur lebar gambar dalam container */
+  flex-shrink: 0; /* Mencegah gambar menjadi terlalu kecil */
+  max-width: 100%;
+  height: auto;
+}
