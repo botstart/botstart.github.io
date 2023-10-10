@@ -38,6 +38,7 @@
     <img src="/assets/images/gambar7.png" alt="Deskripsi Gambar 7">
   </div>
 </div>
+
 <script>
   // JavaScript untuk mengatur slide show
   var slideIndex = 0;
@@ -52,22 +53,9 @@
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1; }
     slides[slideIndex - 1].style.display = "block";
-    slideTransition();
-  }
-
-  function slideTransition() {
-    var slides = document.getElementsByClassName("mySlides");
-    var currentIndex = slideIndex - 1;
-    var nextIndex = (slideIndex % slides.length);
-    slides[currentIndex].style.animation = "slide-out 1s forwards"; // Geser keluar
-    slides[nextIndex].style.animation = "slide-in 1s forwards"; // Geser masuk
-    setTimeout(function() {
-      slides[currentIndex].style.display = "none"; // Sembunyikan gambar lama setelah perpindahan
-      slides[currentIndex].style.animation = "";
-    }, 1000); // Sesuaikan dengan durasi animasi
+    setTimeout(showSlides, 2000); // Ganti gambar setiap 2 detik
   }
 </script>
-
 <br>
     <!-- isi konten -->
     <p style="text-align: center;"><a class="logo">Update Gretongan</a></p>
