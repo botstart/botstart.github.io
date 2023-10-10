@@ -42,40 +42,20 @@
 <script>
   // JavaScript untuk mengatur slide show
   var slideIndex = 0;
-  var slides = document.getElementsByClassName("mySlides");
   showSlides();
 
   function showSlides() {
-    for (var i = 0; i < slides.length; i++) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
     slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
+    if (slideIndex > slides.length) { slideIndex = 1; }
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 2000); // Ganti gambar setiap 2 detik
-
-    // Untuk menggeser ke kiri ketika mencapai gambar terakhir
-    if (slideIndex === slides.length) {
-      document.querySelector(".slideshow-container").style.flexDirection = "row-reverse";
-    } else {
-      document.querySelector(".slideshow-container").style.flexDirection = "row";
-    }
   }
 </script>
-
-
-
-    <div class="container-slide">
-        <div class="wrapper">
-            <img src="https://i.pinimg.com/originals/2b/de/de/2bdede0647e3cdf75b44ea33723201d9.jpg">
-            <img src="https://images6.alphacoders.com/462/thumb-1920-462371.jpg">
-            <img src="https://images5.alphacoders.com/343/thumb-1920-343645.jpg">
-            <img src="https://cdn.wallpapersafari.com/24/98/dwMtqD.jpg">
-        </div>
-    </div>
-
 <br>
     <!-- isi konten -->
     <p style="text-align: center;"><a class="logo">Update Gretongan</a></p>
