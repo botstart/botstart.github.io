@@ -355,7 +355,6 @@ body {
 .mySlides {
   display: none;
 }
-
 /* Gaya CSS untuk gambar dalam slide */
 .mySlides img {
   width: 100%; /* Mengatur lebar gambar ke maksimum lebar slide show */
