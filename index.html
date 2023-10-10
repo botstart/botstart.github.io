@@ -13,37 +13,28 @@
     <title>Update Config Aplikasi Gretongan</title>
 
   <style media="screen">
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #7aacff;
+      }
+      .container-slide { 
+      width: 500px; 
+      margin: 0 auto; /* Ini akan mengatur elemen di tengah horizontal halaman */
+      overflow: hidden; 
+      border: 10px solid #ffffff; 
+      border-radius: 8px; 
+      box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3); 
+      }
 
-body {
-  background-color: #7aacff;
-}
-
-.container-slide {
-  width: 500px;
-  margin: 0 auto;
-  overflow: hidden;
-  border: 10px solid #ffffff;
-  border-radius: 8px;
-  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-.wrapper {
-  width: 700%; /* Ubah lebar .wrapper menjadi 700% (7 gambar x 100%) */
-  display: flex;
-  animation: slide 60s linear infinite; /* Ubah durasi menjadi 24s */
-}
-
-.slide {
-  flex: 1; /* Setiap gambar mengambil lebar yang sama dalam container */
-  min-width: 500px; /* Sesuaikan dengan lebar container-slide */
-  height: auto; /* Biarkan tinggi gambar menyesuaikan */
-}
+      .wrapper {
+        width: 500%; /* Mengatur lebar container untuk slide gambar */
+        display: flex;
+        animation: slide 16s infinite;
+      }
 
 @keyframes slide {
   0%, 100% {
