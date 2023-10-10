@@ -345,48 +345,49 @@ body {
     }
 
     .slideshow-container {
-    width: 85vmin;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    overflow: hidden;
-    border: 10px solid #ffffff;
-    border-radius: 8px;
-    box-shadow: 10px 25px 30px rgba(0,0,0,0.3);
-}
-    .mySlides {
-    width: 100%;
-    display: flex;
-    animation: slide 16s infinite;
-}
+      width: 85vmin;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      overflow: hidden;
+      border: 10px solid #ffffff;
+      border-radius: 8px;
+      box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+    }
 
-img{
-    width: 100%;
-}
-@keyframes geser{
-    0%{
-        mengubah: translateX(0);
+    .mySlides {
+      display: flex;
+      animation: slide 16s infinite;
     }
-    25%{
-        mengubah: translateX(0);
+
+    img {
+      width: 100%;
     }
-    30%{
-        mengubah: translateX(-100%);
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(0);
+      }
+      30% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(-100%);
+      }
+      55% {
+        transform: translateX(-200%);
+      }
+      75% {
+        transform: translateX(-200%);
+      }
+      80% {
+        transform: translateX(-300%);
+      }
+      100% {
+        transform: translateX(-300%);
+      }
     }
-    50%{
-        mengubah: translateX(-100%);
-    }
-    55%{
-        mengubah: translateX(-200%);
-    }
-    75%{
-        mengubah: translateX(-200%);
-    }
-    80%{
-        mengubah: translateX(-300%);
-    }
-    100%{
-        mengubah: translateX(-300%);
-    }
-}
