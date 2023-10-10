@@ -344,19 +344,17 @@ body {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-
     /* Gaya CSS untuk slide show */
     .slideshow-container {
       max-width: 800px;
       position: relative;
       margin: auto;
-      overflow: hidden;
+      overflow: hidden; /* Menyembunyikan gambar yang melebihi container */
     }
 
     .mySlides {
-      position: absolute;
-      width: 100%;
-      transition: transform 1s ease-in-out;
+      display: inline-block; /* Menampilkan gambar secara berdampingan */
+      transition: transform 1s; /* Animasi perpindahan */
     }
 
     img {
