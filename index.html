@@ -36,14 +36,16 @@ body {
   width: 100%; /* Menggunakan persentase agar responsif */
   display: flex;
   animation: slide 16s infinite;
-  overflow: hidden; /* Mengatasi gambar yang keluar dari container */
 }
 
 .slide {
   flex: 1;
-  min-width: 100%; /* Menggunakan persentase agar responsif */
   height: auto; /* Biarkan tinggi gambar menyesuaikan */
-  object-fit: cover; /* Memastikan gambar mengisi container */
+}
+
+.slide img {
+  width: 100%; /* Menggunakan persentase agar gambar mengisi box */
+  height: auto; /* Biarkan tinggi gambar menyesuaikan */
 }
 
 @keyframes slide {
