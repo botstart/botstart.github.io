@@ -39,44 +39,30 @@
   </div>
 </div>
 <script>
-var slideContainer = document.querySelector('.slideshow-container');
-var slideIndex = 0;
-var isAnimating = false;
-
-function handleScroll(event) {
-  if (isAnimating) return;
-  if (event.deltaX > 0) {
-    // Scroll ke kanan
-    showSlides(slideIndex + 1);
-  } else if (event.deltaX < 0) {
-    // Scroll ke kiri
-    showSlides(slideIndex - 1);
-  }
-}
-
-function showSlides(n) {
-  if (isAnimating) return;
-  isAnimating = true;
+  var currentSlide = 0;
+  var slideWidth = document.querySelector(".mySlides").clientWidth;
   
-  var slides = document.querySelectorAll('.mySlides');
-
-  slideIndex = (n + slides.length) % slides.length;
-
-  slideContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
-
-  setTimeout(function() {
-    isAnimating = false;
-  }, 300); // Durasi animasi dalam milidetik
-}
-
-function autoSlide() {
-  showSlides(slideIndex + 1);
-  setTimeout(autoSlide, 2000); // Ubah gambar secara otomatis setiap 2 detik
-}
-
-// Panggil autoSlide() untuk memulai otomatisasi
-autoSlide();
-
+  function scrollSlides(event) {
+    var slides = document.querySelectorAll(".mySlides");
+    var scrollDirection = event.deltaY;
+    
+    if (scrollDirection > 0) {
+      // Scroll ke kanan
+      currentSlide++;
+    } else {
+      // Scroll ke kiri
+      currentSlide--;
+    }
+    
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    } else if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    
+    var translateX = -currentSlide * slideWidth;
+    document.querySelector(".slideshow-container").style.transform = "translateX(" + translateX + "px)";
+  }
 </script>
 <br>
     <!-- isi konten -->
