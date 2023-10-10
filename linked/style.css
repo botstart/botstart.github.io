@@ -349,10 +349,13 @@ body {
       max-width: 800px;
       position: relative;
       margin: auto;
+      overflow: hidden;
     }
 
     .mySlides {
-      display: none;
+      position: absolute;
+      width: 100%;
+      transition: transform 1s ease-in-out;
     }
 
     img {
@@ -365,22 +368,3 @@ body {
       border: 5px solid #333;
       padding: 10px;
     }
-
-  @keyframes slide-out {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  @keyframes slide-in {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
