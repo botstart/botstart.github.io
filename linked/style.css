@@ -345,7 +345,7 @@ body {
     }
 /* Gaya CSS untuk slide show */
 .slideshow-container {
-  max-width: 100%;
+  width: 100%;
   position: relative;
   margin: auto;
 }
@@ -355,7 +355,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
