@@ -34,15 +34,17 @@ body {
 }
 
 .wrapper {
-  width: 1400%; /* Ubah lebar .wrapper menjadi 1400% (7 gambar x 200%) */
+  width: 700%; /* Mengatur lebar .wrapper menjadi 700% (7 gambar x 100%) */
   display: flex;
-  animation: slide 20s linear infinite; /* Ubah durasi animasi menjadi 20 detik */
+  animation: slide 30s linear infinite; /* Mengubah durasi animasi menjadi 30 detik (atau sesuai keinginan Anda) */
+  overflow: hidden; /* Menambah overflow: hidden pada .wrapper */
 }
 
 .slide {
   flex: 1;
   min-width: 500px;
   height: auto;
+  margin-right: 10px; /* Mengubah margin-right untuk memberikan jarak antara gambar */
 }
 
 @keyframes slide {
