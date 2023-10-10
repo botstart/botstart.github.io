@@ -38,24 +38,25 @@
     <img src="/assets/images/gambar7.png" alt="Deskripsi Gambar 7">
   </div>
 </div>
-
 <script>
   // JavaScript untuk mengatur slide show
   var slideIndex = 0;
   showSlides();
 
   function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
+    var slides = document.querySelectorAll(".mySlides");
+    for (var i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
     slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
+    if (slideIndex > slides.length) { 
+      slideIndex = 1; 
+    }
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 2000); // Ganti gambar setiap 2 detik
   }
 </script>
+
 <br>
     <!-- isi konten -->
     <p style="text-align: center;"><a class="logo">Update Gretongan</a></p>
