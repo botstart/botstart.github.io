@@ -15,50 +15,46 @@
   <body>
      <div id="header"></div>
 <br>
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slide"><img src="/assets/images/gambar1.png" alt="Gambar 1"></div>
-            <div class="slide"><img src="/assets/images/gambar2.png" alt="Gambar 2"></div>
-            <div class="slide"><img src="/assets/images/gambar3.png" alt="Gambar 3"></div>
-            <div class="slide"><img src="/assets/images/gambar4.png" alt="Gambar 4"></div>
-            <div class="slide"><img src="/assets/images/gambar5.png" alt="Gambar 5"></div>
-            <div class="slide"><img src="/assets/images/gambar6.png" alt="Gambar 6"></div>
-            <div class="slide"><img src="/assets/images/gambar7.png" alt="Gambar 7"></div>
-        </div>
-        <div class="indicators"></div>
-    </div>
+<div class="slideshow-container">
+  <div class="mySlides frame">
+    <img src="/assets/images/gambar1.png" alt="Deskripsi Gambar 1">
+  </div>
+  <div class="mySlides frame">
+    <img src="/assets/images/gambar2.png" alt="Deskripsi Gambar 2">
+  </div>
+  <div class="mySlides frame">
+    <img src="/assets/images/gambar3.png" alt="Deskripsi Gambar 3">
+  </div>
+  <div class="mySlides frame">
+    <img src="/assets/images/gambar4.png" alt="Deskripsi Gambar 4">
+  </div>
+  <div class="mySlides frame">
+    <img src="/assets/images/gambar5.png" alt="Deskripsi Gambar 5">
+  </div>
+  <div class="mySlides frame">
+    <img src="/assets/images/gambar6.png" alt="Deskripsi Gambar 6">
+  </div>
+  <div class="mySlides frame">
+    <img src="/assets/images/gambar7.png" alt="Deskripsi Gambar 7">
+  </div>
+</div>
+
 <script>
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-const indicatorsContainer = document.querySelector('.indicators');
+  // JavaScript untuk mengatur slide show
+  var slideIndex = 0;
+  showSlides();
 
-let currentIndex = 0;
-
-// Buat indikator untuk setiap slide
-slides.forEach((_, index) => {
-    const indicator = document.createElement('div');
-    indicator.classList.add('indicator');
-    if (index === currentIndex) {
-        indicator.classList.add('active');
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
     }
-    indicator.addEventListener('click', () => {
-        changeSlide(index);
-    });
-    indicatorsContainer.appendChild(indicator);
-});
-
-function changeSlide(index) {
-    slides[currentIndex].style.transform = 'translateX(-100%)';
-    slides[index].style.transform = 'translateX(0)';
-    indicatorsContainer.querySelector('.active').classList.remove('active');
-    indicatorsContainer.children[index].classList.add('active');
-    currentIndex = index;
-}
-
-setInterval(() => {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    changeSlide(nextIndex);
-}, 3000);
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Ganti gambar setiap 2 detik
+  }
 </script>
 <br>
     <!-- isi konten -->
