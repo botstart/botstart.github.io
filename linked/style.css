@@ -343,66 +343,38 @@ body {
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
+/* Style untuk container slider */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
 
-  .slider-frame{
-      overflow: hidden;
-      height: 800px;
-      width: 1200px;
-      margin-left: 360px;
-      margin-top: 20px;
-  }
- 
-  /*---------- SLIDE ANIMATION --------------*/
- 
- 
-  @keyframes slide_animation{
-      0% {left:0px;}
-      10% {left:0px;}
-      20% {left:1200px;}
-      30% {left:1200px;}
-      40% {left: 2400px;}
-      50% {left: 2400px;}
-      60% {left: 1200px;}
-      70% {left: 1200px;}
-      80% {left: 0px;}
-      90% {left: 0px;}
-      100% {left:0px;}
-  }
- 
-  @-webkit-keyframes slide_animation{
-      0% {left:0px;}
-      10% {left:0px;}
-      20% {left:1200px;}
-      30% {left:1200px;}
-      40% {left: 2400px;}
-      50% {left: 2400px;}
-      60% {left: 1200px;}
-      70% {left: 1200px;}
-      80% {left: 0px;}
-      90% {left: 0px;}
-      100% {left:0px;}
-  }
- 
-  .slide-images{
-      width: 3600px;
-      height: 800px;
-      margin: 0 0 0 -2400px;
-      position: relative;
-      -webkit-animation-name: slide_animation;
-      animation-name: slide_animation;
-      -webkit-animation-duration: 33s;
-      animation-duration: 33s;
-      -webkit-animation-iteration-count: infinite;
-      animation-iteration-count: infinite;
-      -webkit-animation-direction: alternate;
-      animation-direction: alternate;
-      -webkit-animation-play-state: running;
-      animation-play-state: running;
-  }
- 
-  .img-container{
-      height: 800px;
-      width: 1200px;
-      position: relative;
-      float: left;
-  }
+/* Style untuk slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+/* Style untuk indikator */
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #888;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #333;
+}
