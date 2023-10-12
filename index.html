@@ -31,12 +31,45 @@
   .wrapper {
     width: 8000px; /* 10 kali lebar container untuk slide gambar (800x10) */
     display: flex;
+    animation: slide 20s linear infinite; /* Durasi animasi ditambah karena ada 10 gambar dan ditetapkan ke linear */
   }
   .wrapper img {
     float: left;
     margin-right: -4px;
     width: 800px;
     height: 500px;
+  }
+  @keyframes slide {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-10%);
+    }
+    30% {
+      transform: translateX(-20%);
+    }
+    40% {
+      transform: translateX(-30%);
+    }
+    50% {
+      transform: translateX(-40%);
+    }
+    60% {
+      transform: translateX(-50%);
+    }
+    70% {
+      transform: translateX(-60%);
+    }
+    80% {
+      transform: translateX(-70%);
+    }
+    90% {
+      transform: translateX(-80%);
+    }
   }
 </style>
 </head>
@@ -57,20 +90,6 @@
       <img src="/assets/images/gambar10.png" width="800" height="500">
     </div>
   </div>
-  <script>
-    const wrapper = document.querySelector('.wrapper');
-    const images = document.querySelectorAll('.wrapper img');
-    let currentIndex = 0;
-    const delay = 5000; // Jeda 5 detik
-
-    function slideImage() {
-      images[currentIndex].style.transform = 'translateX(-100%)';
-      currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].style.transform = 'translateX(0)';
-    }
-
-    setInterval(slideImage, delay);
-  </script>
   <br>
 <br>
     <!-- isi konten -->
