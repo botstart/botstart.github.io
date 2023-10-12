@@ -40,11 +40,11 @@
     animation: slide 20s infinite; /* Durasi animasi 20 detik */
   }
 .element {
-  animation: slide 5s linear infinite alternate;
+  animation: slide 10s linear infinite;
 }
 
 @keyframes slide {
-  0% {
+  0%, 100% {
     transform: translateX(0);
   }
   10% {
@@ -71,7 +71,7 @@
   80% {
     transform: translateX(-800%);
   }
-  90%, 100% {
+  90% {
     transform: translateX(-900%);
   }
 }
