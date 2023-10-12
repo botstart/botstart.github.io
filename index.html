@@ -31,45 +31,12 @@
   .wrapper {
     width: 8000px; /* 10 kali lebar container untuk slide gambar (800x10) */
     display: flex;
-    animation: slide 60s linear infinite; /* Animasi durasinya 60 detik */
   }
   .wrapper img {
     float: left;
     margin-right: -4px;
     width: 800px;
     height: 500px;
-  }
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    10% {
-      transform: translateX(0);
-    }
-    20% {
-      transform: translateX(-100%);
-    }
-    30% {
-      transform: translateX(-100%);
-    }
-    40% {
-      transform: translateX(-200%);
-    }
-    50% {
-      transform: translateX(-200%);
-    }
-    60% {
-      transform: translateX(-300%);
-    }
-    70% {
-      transform: translateX(-300%);
-    }
-    80% {
-      transform: translateX(-400%);
-    }
-    90% {
-      transform: translateX(-400%);
-    }
   }
 </style>
 </head>
@@ -81,7 +48,7 @@
       <img src="/assets/images/gambar1.png" width="800" height="500">
       <img src="/assets/images/gambar2.png" width="800" height="500">
       <img src="/assets/images/gambar3.png" width="800" height="500">
-      <img src="/assets/images/gambar4.png" width="800" height="500">
+      <img src "/assets/images/gambar4.png" width="800" height="500">
       <img src="/assets/images/gambar5.png" width="800" height="500">
       <img src="/assets/images/gambar6.png" width="800" height="500">
       <img src="/assets/images/gambar7.png" width="800" height="500">
@@ -93,13 +60,17 @@
   <script>
     const wrapper = document.querySelector('.wrapper');
     const images = document.querySelectorAll('.wrapper img');
+    let currentIndex = 0;
+    const delay = 5000; // Jeda 5 detik
 
-    images.forEach((image, index) => {
-      image.style.animationDelay = `${index * 5}s`;
-    });
+    function slideImage() {
+      images[currentIndex].style.transform = 'translateX(-100%)';
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].style.transform = 'translateX(0)';
+    }
+
+    setInterval(slideImage, delay);
   </script>
-</body>
-
   <br>
 <br>
     <!-- isi konten -->
