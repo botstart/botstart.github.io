@@ -31,7 +31,7 @@
   .wrapper {
     width: 8000px; /* 10 kali lebar container untuk slide gambar (800x10) */
     display: flex;
-    animation: slide 20s linear infinite; /* Durasi animasi ditambah karena ada 10 gambar dan ditetapkan ke linear */
+    animation: slide 60s linear infinite; /* Animasi durasinya 60 detik */
   }
   .wrapper img {
     float: left;
@@ -39,38 +39,39 @@
     width: 800px;
     height: 500px;
   }
-  @keyframes slide {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    10% {
-      transform: translateX(0);
-    }
-    20% {
-      transform: translateX(-10%);
-    }
-    30% {
-      transform: translateX(-20%);
-    }
-    40% {
-      transform: translateX(-30%);
-    }
-    50% {
-      transform: translateX(-40%);
-    }
-    60% {
-      transform: translateX(-50%);
-    }
-    70% {
-      transform: translateX(-60%);
-    }
-    80% {
-      transform: translateX(-70%);
-    }
-    90% {
-      transform: translateX(-80%);
-    }
+
+  /* Mengatur delay pada setiap gambar */
+  .wrapper img:nth-child(1) {
+    animation-delay: 0s;
   }
+  .wrapper img:nth-child(2) {
+    animation-delay: 5s;
+  }
+  .wrapper img:nth-child(3) {
+    animation-delay: 10s;
+  }
+  .wrapper img:nth-child(4) {
+    animation-delay: 15s;
+  }
+  .wrapper img:nth-child(5) {
+    animation-delay: 20s;
+  }
+  .wrapper img:nth-child(6) {
+    animation-delay: 25s;
+  }
+  .wrapper img:nth-child(7) {
+    animation-delay: 30s;
+  }
+  .wrapper img:nth-child(8) {
+    animation-delay: 35s;
+  }
+  .wrapper img:nth-child(9) {
+    animation-delay: 40s;
+  }
+  .wrapper img:nth-child(10) {
+    animation-delay: 45s;
+  }
+}
 </style>
 </head>
 <body>
