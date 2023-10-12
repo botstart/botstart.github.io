@@ -146,7 +146,7 @@ const headerHTML = `
            <a href="/page/apps.html">Aplikasi</a>    
          </li>    
          <li>    
-           <a href="https://www.youtube.com/channel/UCeMezZCLKzcpQyYFSiW6DCA?sub_confirmation=1">YouTube</a>    
+           <a href="https://www.youtube.com/channel/UCH68QUj7cYpy4Buj8fFuoJw?sub_confirmation=1">YouTube</a>    
          </li>    
          <li>    
            <a href="/page/dana-kaget/direct.html">Dana Kaget</a>    
