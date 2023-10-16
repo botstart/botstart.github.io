@@ -71,7 +71,7 @@ head.appendChild(linkFavicon);
 // Buat elemen link untuk CSS Stylesheets
 var linkStylesheet = document.createElement('link');
 linkStylesheet.setAttribute('rel', 'stylesheet');
-linkStylesheet.setAttribute('href', '/assets/CSS/style.css');
+linkStylesheet.setAttribute('href', '/linked/style.css');
 head.appendChild(linkStylesheet);
 
 // Mendapatkan judul halaman
@@ -100,65 +100,60 @@ document.title = updatedTitle;
 
 // header
 const headerHTML = `   
-   <script src="/linked/penutup.js"></script>  
-     <script src="/linked/names.js"></script>  
-      <script src="/linked/speed.js"></script>  
-       <script src="/linked/teks-config.js"></script>
-<hr>
-<hr>
-<header>
+   <script src="/assets/JS/penutup.js"></script>  
+   <script src="/assets/JS/names.js"></script>  
+   <script src="/assets/JS/speed.js"></script>  
+   <script src="/assets/JS/teks-config.js"></script>
+<br>
+<br>
+<br>
+<header class="main-header">
    <div class="nav-row-1">    
      <nav>    
        <ul class="nav-container">    
          <h1 class="title"></h1>    
-    <!--     <li>    
-           <a href="/about/grup-telegram.html">Telegram</a>    
-         </li>   -->
          <li>    
            <a href="/page/home.html">Beranda</a>    
          </li>  
          <li>    
-           <a href="qhttps://s.bankneo.co.id/iMl110/#register?r_code=D2TYA2">Cuan Legit</a>    
-         </li>   
-    <!--     <li>
-           <a href="/page/ssh/direct.html">Create SSH</a>    
-         </li>    
-         <li>    
-           <a href="/about/sosmed.html">Sosmed</a>    
-         </li>    
-         <li>    
            <a href="/linked/images/donasi.png">Donasi</a>    
-         </li>    -->
-         <li>    
-           <a href="https://apppintar.blogspot.com/">Blog</a>    
-         </li>    
-    <!--   </ul>    
-     </nav>    
-  </div>    
-   <div class="nav-row-2">    
-     <nav>    
-       <ul class="nav-container">    
-         <h1 class="title"></h1>    -->  
-         <li>    
-           <a href="/page/tutorial.html">Tutorial</a>    
-         </li>    
-         <li>    
-           <a href="/page/apps.html">Aplikasi</a>    
-         </li>    
+         </li>
          <li>    
            <a href="https://www.youtube.com/channel/UCeMezZCLKzcpQyYFSiW6DCA?sub_confirmation=1">YouTube</a>    
          </li>    
          <li>    
            <a href="/page/dana-kaget/direct.html">Dana Kaget</a>    
          </li>    
-     <!--    <li>    
+         <li>    
+           <a href="qhttps://s.bankneo.co.id/iMl110/#register?r_code=D2TYA2">Cuan Legit</a>    
+         </li> 
+         <li>    
            <a href="https://apppintar.blogspot.com/">Selengkapnya =></a>    
-         </li>    -->
+         </li> 
+         </ul>    
+     </nav>    
+  </div>    
+  <!--     <div class="nav-row-2">    
+     <nav>    
+       <ul class="nav-container">    
+         <h1 class="title"></h1> 
+         <li>
+           <a href="/page/ssh/direct.html">Create SSH</a>    
+         </li>    
+         <li>    
+           <a href="/about/sosmed.html">Sosmed</a>    
+         </li>    
+         <li>    
+           <a href="/about/grup-telegram.html">Telegram</a>    
+         </li>
+         <li>    
+           <a href="/page/apps.html">Aplikasi</a>    
+         </li>    
        </ul>    
      </nav>    
-   </div>  
+   </div>  -->
 </header>
-<hr>
+<br>
  `; 
   
    window.addEventListener("DOMContentLoaded", function () { 
@@ -192,6 +187,7 @@ const headerHTML = `
   
     var scriptsToLoad = [  
       "/assets/JS/bg_random_color.js", 
+      "/assets/JS/sidenav.js", 
       "/assets/JS/favicon.js",
       "/assets/JS/google.js", 
       "/assets/JS/ip-address.js", 
