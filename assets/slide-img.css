@@ -1,5 +1,4 @@
-
-<style media="screen">
+ media="screen"
   * {
     padding: 0;
     margin: 0;
@@ -25,10 +24,10 @@
     margin-right: -4px;
     width: 800px;
     height: 500px;
-    animation: slide 20s infinite; /* Durasi animasi 20 detik */
+    animation: slide 40s infinite; /* Durasi animasi 20 detik */
   }
 .element {
-  animation: slide 10s linear infinite;
+  animation: slide 40s linear infinite;
 }
 
 @keyframes slide {
@@ -63,4 +62,3 @@
     transform: translateX(-900%);
   }
 }
-</style
